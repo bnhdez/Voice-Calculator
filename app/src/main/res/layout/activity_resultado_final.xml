@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/Titulo2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Voice Calculator"
+                    android:textColor="@color/black"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="35dp"
+                    android:textSize="48dp"
+                    android:fontFamily="@font/fredokaregular"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/microfono2"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/two"
+                    android:layout_below="@id/Titulo2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="35dp" />
+
+                <TextView
+                    android:id="@+id/texto1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/microfono2"
+                    android:text="El resultado es:"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/fredokaregular"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="18dp"
+                    android:layout_marginTop="35dp"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:background="@drawable/style_btn"/>
+
+                <TextView
+                    android:id="@+id/texto2"
+                    android:layout_width="250dp"
+                    android:layout_height="200dp"
+                    android:layout_below="@id/texto1"
+                    android:text=""
+                    android:fontFamily="@font/fredokaregular"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/black"
+                    android:textSize="58dp"
+                    android:layout_marginTop="35dp"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:background="@drawable/style_textview"/>
+
+                <ImageView
+                    android:id="@+id/refresh"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_below="@id/texto2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    android:src="@drawable/refresh" />
+
+                <TextView
+                    android:id="@+id/restart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Restart"
+                    android:layout_below="@id/refresh"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/fredokaregular"
+                    android:layout_marginBottom="85dp"
+                    android:textSize="25dp"
+                    android:textStyle="bold"/>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

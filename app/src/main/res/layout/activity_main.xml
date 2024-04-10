@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/Titulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Voice Calculator"
+                    android:textColor="@color/black"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="35dp"
+                    android:textSize="48dp"
+                    android:fontFamily="@font/fredokaregular"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/microfono"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:src="@drawable/microfono"
+                    android:layout_below="@id/Titulo"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="35dp" />
+
+                <TextView
+                    android:id="@+id/indicacion"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/microfono"
+                    android:text="Presione el microfono y diga su operación aritmética. Por ejemplo: uno menos diez"
+                    android:fontFamily="@font/fredokaregular"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:layout_marginTop="35dp"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:background="@drawable/style_textview"/>
+
+                <Button
+                    android:id="@+id/btnCalcular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Calcular"
+                    android:textColor="@color/white"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/fredokaregular"
+                    android:textSize="24dp"
+                    android:textStyle="bold"
+                    android:layout_below="@id/indicacion"
+                    android:layout_marginTop="25dp"
+                    android:layout_centerHorizontal="true"
+                    app:backgroundTint="@null"
+                    android:background="@drawable/style_btn"
+                    android:layout_marginBottom="40dp"/>
+
+                <Button
+                    android:id="@+id/btnEditar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/btnCalcular"
+                    android:layout_below="@id/indicacion"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginLeft="15dp"
+                    app:backgroundTint="@null"
+                    android:background="@drawable/style_textview"
+                    app:icon="@drawable/icon_edit"
+                    android:visibility="invisible"
+                    app:iconGravity="textStart"
+                    app:iconTint="@color/black"
+                    android:gravity="center"/>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
